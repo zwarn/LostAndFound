@@ -337,7 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 796789735}
   deadZone: 3
-  cameraSpeed: 10
+  cameraSpeed: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
