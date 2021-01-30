@@ -103,6 +103,6 @@ public class DialogManager : MonoBehaviour
 
     public void openItemReceived(ItemScript itemScript)
     {
-        openDialog(new[] {itemScript.itemName + " was found"}, null);
+        openDialog(new[] {"Thank you so much! This is exactly what i needed.", itemScript.itemName + " was found"}, null);
     }
 }

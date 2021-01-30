@@ -6,7 +6,10 @@ using UnityEngine;
 public class NPC : MonoBehaviour, Interactable
 {
     public string[] dialog;
+    public string[] dialogForIncorrectItem;
+    //public string[] dialogForCorrectItem;
     public GameObject holdsItem;
+    public GameObject searchedItem;
     private Vector2 direction = Vector2.zero;
     private SpriteRenderer _spriteRenderer;
     public float fadeSpeed = 5;
@@ -41,8 +44,15 @@ public class NPC : MonoBehaviour, Interactable
 
     private void OnReceiveItem(PlayerController playerController)
     {
+        if (playerController.peekItem() != searchedItem)
+        {
+            DialogManager.Instance().openDialog(dialogForIncorrectItem, null);
+            Debug.LogError("Player wanted to give the wrong item");
+            return;
+        }
         GameObject item = playerController.takeItem();
         playerController.putItem(holdsItem);
+        //DialogManager.Instance().openDialog(dialogForCorrectItem, null);
         DialogManager.Instance().openItemReceived(holdsItem.GetComponent<ItemScript>());
         //TODO: NPC holds item
         Destroy(item);

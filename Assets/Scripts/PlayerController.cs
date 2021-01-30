@@ -86,6 +86,17 @@ public class PlayerController : MonoBehaviour, HasItem
         return item;
     }
 
+    public GameObject peekItem()
+    {
+        if (!hasItem())
+        {
+            Debug.LogError("Wanted to peek at the player item while not having any");
+            return null;
+        }
+
+        return _carriedItem;
+    }
+
     public void putItem(GameObject item)
     {
         if (hasItem())

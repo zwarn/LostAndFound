@@ -1577,6 +1577,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 4565319039337754193, guid: 0f218adcb5ff2df4e9747119c9bd0cdd,
+        type: 3}
+      propertyPath: searchedItem
+      value: 
+      objectReference: {fileID: 1858211177}
+    - target: {fileID: 4565319039337754193, guid: 0f218adcb5ff2df4e9747119c9bd0cdd,
+        type: 3}
+      propertyPath: dialogForCorrectItem.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565319039337754193, guid: 0f218adcb5ff2df4e9747119c9bd0cdd,
+        type: 3}
+      propertyPath: dialogForIncorrectItem.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565319039337754193, guid: 0f218adcb5ff2df4e9747119c9bd0cdd,
+        type: 3}
+      propertyPath: dialogForCorrectItem.Array.data[0]
+      value: Thank you so much ... this is exactly what i am looking for!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565319039337754193, guid: 0f218adcb5ff2df4e9747119c9bd0cdd,
+        type: 3}
+      propertyPath: dialogForIncorrectItem.Array.data[0]
+      value: Sorry ... this is not what i am looking for!
+      objectReference: {fileID: 0}
     - target: {fileID: 4565319039337754225, guid: 0f218adcb5ff2df4e9747119c9bd0cdd,
         type: 3}
       propertyPath: m_RootOrder
