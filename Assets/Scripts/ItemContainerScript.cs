@@ -10,11 +10,13 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
     public void OnSelect()
     {
         changeColor(Color.yellow);
+        showItemName();
     }
 
     public void OnDeselect()
     {
         changeColor(Color.white);
+        hideItemName();
     }
 
     private void changeColor(Color color)
@@ -27,6 +29,19 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
         {
             carriedItem.GetComponent<SpriteRenderer>().color = color;
         }
+    }
+
+    private void showItemName()
+    {
+        if (carriedItem != null)
+        {
+            UiScript.Instance().showItemName(carriedItem.GetComponent<ItemScript>());
+        }
+    }
+
+    private void hideItemName()
+    {
+        UiScript.Instance().showItemName(null);
     }
 
     public void OnInteract(PlayerController playerController)
