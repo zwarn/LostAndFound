@@ -23,6 +23,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9627032-6887-4EDC-9774-216522BE7D07/a2/f24f9292/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/51/7f412583/Material.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -40,6 +41,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DialogManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NPC.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MenuScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nlAnF9wGsTFWIRYTkk4AeRWzDM" />
