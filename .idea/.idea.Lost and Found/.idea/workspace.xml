@@ -39,11 +39,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SelectorScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InputController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DialogManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/NPC.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/KarenScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NPC.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/DialogManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nlAnF9wGsTFWIRYTkk4AeRWzDM" />

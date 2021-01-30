@@ -13,6 +13,14 @@ public class PlayerController : MonoBehaviour, HasItem
     private float _selectorDistance;
     private GameObject _carriedItem;
 
+    public string[] introDialog =
+    {
+        "",
+        "You are Nemo, a friendly Ghost learning under your mentor Karen to take care of the \"Lost and Found\".",
+        "A place for the living to find what they lost and share what they have found.",
+        "Hear there stories, find out what they are missing and accept what they give you."
+    };
+
     void Awake()
     {
         _input = InputController.Instance();
@@ -34,6 +42,7 @@ public class PlayerController : MonoBehaviour, HasItem
     void Start()
     {
         _selectorDistance = selector.transform.localPosition.magnitude;
+        DialogManager.Instance().openDialog(introDialog, null);
     }
 
     // Update is called once per frame

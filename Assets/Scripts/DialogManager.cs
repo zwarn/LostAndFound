@@ -101,8 +101,12 @@ public class DialogManager : MonoBehaviour
         }, action);
     }
 
-    public void openItemReceived(ItemScript itemScript)
+    public void openItemReceived(ItemScript itemScript, string[] dialogForCorrectItem)
     {
-        openDialog(new[] {"Thank you so much! This is exactly what i needed.", itemScript.itemName + " was found"}, null);
+        List<string> result = new List<string>();
+        result.AddRange(dialogForCorrectItem);
+        result.Add(itemScript.itemName + " received!");
+
+        openDialog(result.ToArray(), null);
     }
 }

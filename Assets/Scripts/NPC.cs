@@ -7,7 +7,7 @@ public class NPC : MonoBehaviour, Interactable
 {
     public string[] dialog;
     public string[] dialogForIncorrectItem;
-    //public string[] dialogForCorrectItem;
+    public string[] dialogForCorrectItem;
     public GameObject holdsItem;
     public GameObject searchedItem;
     private Vector2 direction = Vector2.zero;
@@ -53,7 +53,7 @@ public class NPC : MonoBehaviour, Interactable
         GameObject item = playerController.takeItem();
         playerController.putItem(holdsItem);
         //DialogManager.Instance().openDialog(dialogForCorrectItem, null);
-        DialogManager.Instance().openItemReceived(holdsItem.GetComponent<ItemScript>());
+        DialogManager.Instance().openItemReceived(holdsItem.GetComponent<ItemScript>(), dialogForCorrectItem);
         //TODO: NPC holds item
         Destroy(item);
         direction = Vector2.down;
