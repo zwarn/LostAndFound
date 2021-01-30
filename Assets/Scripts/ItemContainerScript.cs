@@ -92,9 +92,9 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
             return null;
         }
 
+        changeHighlight(false);
         GameObject item = carriedItem;
         carriedItem = null;
-        item.GetComponent<SpriteRenderer>().color = Color.white;
         changeHighlight(true);
         return item;
     }
@@ -107,10 +107,10 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
             return;
         }
 
+        changeHighlight(false);
         carriedItem = item;
         carriedItem.transform.parent = itemCarry.transform;
         carriedItem.transform.localPosition = Vector3.zero;
-        GetComponent<SpriteRenderer>().color = Color.white;
         changeHighlight(true);
     }
 }
