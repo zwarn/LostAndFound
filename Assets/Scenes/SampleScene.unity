@@ -794,7 +794,7 @@ Transform:
   m_LocalScale: {x: 1.1, y: 1.85, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &162722322
 GameObject:
@@ -1071,8 +1071,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.03, y: 12.03, z: 0}
   m_LocalScale: {x: 0.5, y: 0.8, z: 1}
-  m_Children:
-  - {fileID: 2002761288}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1872,7 +1871,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369145219
 GameObject:
@@ -2804,7 +2803,7 @@ Transform:
   - {fileID: 2053289695}
   - {fileID: 2002761288}
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &599669673
 GameObject:
@@ -9705,7 +9704,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1259131109
 GameObject:
@@ -10802,7 +10801,7 @@ SpriteRenderer:
   m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 26f67132225e3314ebbb3c29ff4c1fe3, type: 3}
-  m_Color: {r: 1, g: 0.9292453, b: 0.9412713, a: 0.6039216}
+  m_Color: {r: 0.9716981, g: 0.75357366, b: 0.7287736, a: 0.6039216}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12036,12 +12035,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6ed614f9c53e2cd498052a837cd0a953, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c2f8000b221890c4299cac0623acdef7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -14261,7 +14260,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1954021548
 PrefabInstance:
@@ -14940,6 +14939,7 @@ GameObject:
   - component: {fileID: 2063914565}
   - component: {fileID: 2063914564}
   - component: {fileID: 2063914566}
+  - component: {fileID: 2063914567}
   m_Layer: 0
   m_Name: Kamin
   m_TagString: Untagged
@@ -15037,6 +15037,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.75039625}
   m_EdgeRadius: 0
+--- !u!95 &2063914567
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063914563}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 303b77e201c106347ba1bdb1c58d5903, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2072274489
 GameObject:
   m_ObjectHideFlags: 0
@@ -15439,6 +15458,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1481202553414205133, guid: bc1bcf6d51a1aca4e9f9bf0ba2715449,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f76ae6ff9d4524a46899b0b7bb813f65, type: 2}
     - target: {fileID: 2218514835358635183, guid: bc1bcf6d51a1aca4e9f9bf0ba2715449,
         type: 3}
       propertyPath: m_Name
@@ -15521,12 +15545,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initial_dialog:
-  - 'Karen: a'
-  - 'Karen: b'
-  - 'Karen: c'
-  - 'Karen: d'
+  - 'Karen: Hello Nemo, here you are ... I''m Karen, your little helper.'
+  - 'Karen: Together we run a "Lost & Found" where we help  souls to find what they
+    have lost and have them share with us what they found.'
+  - 'Karen: We have so many items here to help out. However, our sorting skills may
+    take some work ... Hmm ... Anyway, we usually end up finding everything ...'
+  - 'Karen: Oh look, we have a new customer. Could you please help him?'
   repeating_dialog:
-  - 'Karen: e'
+  - 'Karen: Oh look, we have a new customer. Could you please help him?'
 --- !u!58 &1334922016107928646
 CircleCollider2D:
   m_ObjectHideFlags: 0
