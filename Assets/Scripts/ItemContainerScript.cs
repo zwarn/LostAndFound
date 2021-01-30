@@ -9,25 +9,26 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
 
     public void OnSelect()
     {
-        changeColor(Color.yellow);
+        changeHighlight(true);
         showItemName();
     }
 
     public void OnDeselect()
     {
-        changeColor(Color.white);
+        changeHighlight(false);
         hideItemName();
     }
 
-    private void changeColor(Color color)
+    private void changeHighlight(bool highlight)
     {
+        float value = highlight ? 1 : 0;
         if (carriedItem == null)
         {
-            GetComponent<SpriteRenderer>().color = color;
+            GetComponent<SpriteRenderer>().material.SetFloat(Shader.PropertyToID("_OutlineEnabled"), value);
         }
         else
         {
-            carriedItem.GetComponent<SpriteRenderer>().color = color;
+            carriedItem.GetComponent<SpriteRenderer>().material.SetFloat(Shader.PropertyToID("_OutlineEnabled"), value);
         }
     }
 
@@ -94,7 +95,7 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
         GameObject item = carriedItem;
         carriedItem = null;
         item.GetComponent<SpriteRenderer>().color = Color.white;
-        changeColor(Color.yellow);
+        changeHighlight(true);
         return item;
     }
 
@@ -110,6 +111,6 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
         carriedItem.transform.parent = itemCarry.transform;
         carriedItem.transform.localPosition = Vector3.zero;
         GetComponent<SpriteRenderer>().color = Color.white;
-        changeColor(Color.yellow);
+        changeHighlight(true);
     }
 }
