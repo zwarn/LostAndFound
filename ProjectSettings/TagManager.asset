@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Light
+    uniqueID: 2945889231
+    locked: 0
   - name: Floor
     uniqueID: 2328115763
     locked: 0
