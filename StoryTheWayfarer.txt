@@ -1,0 +1,17 @@
+Pet:„What's your name?“
+NPC: „I am the Wayfarer.“
+Player: „I have never heard that “name” before...“
+NPC: “It's how they call me. And it's what I have always done, who I am.”
+Pet: “I understand. I would love to hear your story.”
+NPC: “My Story?”
+Pet: “That's what this place is all about. Along our way through life we all have found something and on the other hand there are parts we are missing. Here at “...” (Name des Fundbüros??) you can share your story, accomplishments and regrets – you will help others and will be helped in return.”
+NPC: “That's an interesting concept. But... it's hard to tell a story when you don't know how it started.”
+Pet: “Then just start right in the middle.”
+NPC: “...” 
+“I am the Wayfarer. As long as I can remember I have travelled the world and visited places where no one has ever been before. I have hiked on hidden trails and even sailed across the grand sea. Do you know that feeling when you stand on the top of a mountain? Nature is truly amazing and every place has its own charm and magic. No two are alike, just like people. Some would use my maps to conquer new territories or to find rare resources and others would simply... listen. Those with that innocent curiosity made the best audience. Even so I was always happy when I could continue my journey.”
+Pet: “You travelled alone? Haven't you felt lonely?”
+NPC: “My bond with nature was always stronger than that with other humans. Birds are great companions – we share the love to roam freely. But sooner or later they would always leave and return to where they came from. I have always wondered what it's like to have a … home. But I am the Wayfarer - I'm not meant to stay in one place.”
+Pet: “It's all a way of perspective. The journey to oneself is usually one of the toughest and it sounds like you haven't tackled it yet. It could be a great challenge for you.”
+NPC: “That sounds exciting and... comforting. I would love to learn about my roots and find a safe and warm place to rest. You have my deepest gratitude. Please take one of my maps I hope it will help someone who has gone lost.”
+
+Gives Map “a good plan”, would like to have “a warm nest”
