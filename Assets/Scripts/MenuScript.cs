@@ -6,7 +6,7 @@ public class MenuScript : MonoBehaviour
 {
     public void Play() {
         // TODO: Change this later to the correct scene name.
-        SceneManager.LoadScene("SampleSceneMicha");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void Quit() {
