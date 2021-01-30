@@ -73,6 +73,11 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
         }
     }
 
+    public Vector3 Position()
+    {
+        return transform.position;
+    }
+
     public bool hasItem()
     {
         return carriedItem != null;

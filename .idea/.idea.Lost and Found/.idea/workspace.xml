@@ -18,20 +18,21 @@
     <setting file="file://$PROJECT_DIR$/../Sidekick/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/06214B24-5DBB-4D10-A9CE-FD10639BB04E/2c/7f185120/IPanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9627032-6887-4EDC-9774-216522BE7D07/a2/f24f9292/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SelectorScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HasItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/ScriptableObject/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UiScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SelectorScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nlAnF9wGsTFWIRYTkk4AeRWzDM" />

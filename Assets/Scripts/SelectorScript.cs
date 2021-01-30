@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SelectorScript : MonoBehaviour
@@ -27,7 +28,7 @@ public class SelectorScript : MonoBehaviour
 
     public void Interact(PlayerController playerController)
     {
-        //TODO: this will interact with all selected things
-        _selectables.ForEach(interactable => interactable.OnInteract(playerController));
+        _selectables.OrderBy(interactable => (interactable.Position() - transform.position).magnitude).First()
+            .OnInteract(playerController);
     }
 }

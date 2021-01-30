@@ -9,4 +9,6 @@ public interface Interactable
     void OnDeselect();
 
     void OnInteract(PlayerController playerController);
+
+    Vector3 Position();
 }
