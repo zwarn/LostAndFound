@@ -18,11 +18,13 @@ public class DialogManager : MonoBehaviour
     private int index = 0;
     public TMP_Text dialogText;
     public GameObject dialogBox;
+    private Action _action;
 
     private void Awake()
     {
         _instance = this;
         _input = InputController.Instance();
+        _input.Dialog.Disable();
         _input.Dialog.Yes.performed += context => Yes();
         _input.Dialog.No.performed += context => No();
     }
@@ -37,16 +39,24 @@ public class DialogManager : MonoBehaviour
         _input.Disable();
     }
 
-    public void openDialog(string[] dialog)
+    public void openDialog(string[] dialog, Action action)
     {
         _input.Play.Disable();
         _input.Dialog.Enable();
         currentDialog = dialog;
         index = 0;
+        _action = action;
 
         dialogBox.SetActive(true);
 
         showText();
+    }
+
+    private void finishDialog()
+    {
+        closeDialog();
+        _action?.Invoke();
+        _action = null;
     }
 
     private void closeDialog()
@@ -76,10 +86,23 @@ public class DialogManager : MonoBehaviour
     {
         if (index >= currentDialog.Length)
         {
-            closeDialog();
+            finishDialog();
             return;
         }
 
         dialogText.text = currentDialog[index];
+    }
+
+    public void openYesNo(Action action)
+    {
+        openDialog(new[]
+        {
+            "Is this the Item you want to give?"
+        }, action);
+    }
+
+    public void openItemReceived(ItemScript itemScript)
+    {
+        openDialog(new[] {itemScript.itemName + " was found"}, null);
     }
 }

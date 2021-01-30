@@ -1,10 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NPC : MonoBehaviour, Interactable
 {
     public string[] dialog;
+    public GameObject holdsItem;
+    private Vector2 direction = Vector2.zero;
+    private SpriteRenderer _spriteRenderer;
+    public float fadeSpeed = 5;
+    public float walkSpeed = 2;
+
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     public void OnSelect()
     {
@@ -20,11 +31,37 @@ public class NPC : MonoBehaviour, Interactable
     {
         if (playerController.hasItem())
         {
-            //TODO: give Item
+            DialogManager.Instance().openYesNo(() => OnReceiveItem(playerController));
         }
         else
         {
-            DialogManager.Instance().openDialog(dialog);
+            DialogManager.Instance().openDialog(dialog, null);
+        }
+    }
+
+    private void OnReceiveItem(PlayerController playerController)
+    {
+        GameObject item = playerController.takeItem();
+        playerController.putItem(holdsItem);
+        DialogManager.Instance().openItemReceived(holdsItem.GetComponent<ItemScript>());
+        //TODO: NPC holds item
+        Destroy(item);
+        direction = Vector2.down;
+        GetComponent<Collider2D>().enabled = false;
+    }
+
+    private void Update()
+    {
+        if (direction != Vector2.zero)
+        {
+            transform.Translate(direction * (Time.deltaTime * walkSpeed));
+            var color = _spriteRenderer.color;
+            color.a -= fadeSpeed * Time.deltaTime;
+            _spriteRenderer.color = color;
+            if (color.a < 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
