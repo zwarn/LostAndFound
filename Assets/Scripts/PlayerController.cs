@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, HasItem
 {
     private Input _input;
     [SerializeField] private float movementSpeed = 5;
@@ -68,19 +68,34 @@ public class PlayerController : MonoBehaviour
         _selectorScript.Interact(this);
     }
 
-    public void GrabItem(ItemScript itemScript)
+    public bool hasItem()
     {
-        if (_carriedItem)
+        return _carriedItem != null;
+    }
+
+    public GameObject takeItem()
+    {
+        if (!hasItem())
         {
-            //TODO: swap items
+            Debug.LogError("Player tried to give Item while not having any");
+            return null;
         }
-        else
+
+        GameObject item = _carriedItem;
+        _carriedItem = null;
+        return item;
+    }
+
+    public void putItem(GameObject item)
+    {
+        if (hasItem())
         {
-            GameObject item = itemScript.gameObject;
-            _carriedItem = item;
-            _carriedItem.transform.parent = selector.transform;
-            _carriedItem.transform.localPosition = Vector3.zero;
-            _carriedItem.GetComponent<Collider2D>().enabled = false;
+            Debug.LogError("Player tried to take Item while already holding an Item");
+            return;
         }
+
+        _carriedItem = item;
+        _carriedItem.transform.parent = selector.transform;
+        _carriedItem.transform.localPosition = Vector3.zero;
     }
 }
