@@ -169,6 +169,52 @@ public class @Input : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Dialog"",
+            ""id"": ""f26502bf-1444-4713-9341-4c3c0e76bcd0"",
+            ""actions"": [
+                {
+                    ""name"": ""Yes"",
+                    ""type"": ""Button"",
+                    ""id"": ""46b88497-115e-48da-b69b-c362d01e66a0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""No"",
+                    ""type"": ""Button"",
+                    ""id"": ""4500eca9-7de3-485f-97bd-9b0d42533de7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e716db4f-7094-4a85-ac16-c83ab5034a21"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yes"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""acd1db1a-1ae7-435a-87b4-8e1e1f764596"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""No"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -177,6 +223,10 @@ public class @Input : IInputActionCollection, IDisposable
         m_Play = asset.FindActionMap("Play", throwIfNotFound: true);
         m_Play_Movement = m_Play.FindAction("Movement", throwIfNotFound: true);
         m_Play_Interact = m_Play.FindAction("Interact", throwIfNotFound: true);
+        // Dialog
+        m_Dialog = asset.FindActionMap("Dialog", throwIfNotFound: true);
+        m_Dialog_Yes = m_Dialog.FindAction("Yes", throwIfNotFound: true);
+        m_Dialog_No = m_Dialog.FindAction("No", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -263,9 +313,55 @@ public class @Input : IInputActionCollection, IDisposable
         }
     }
     public PlayActions @Play => new PlayActions(this);
+
+    // Dialog
+    private readonly InputActionMap m_Dialog;
+    private IDialogActions m_DialogActionsCallbackInterface;
+    private readonly InputAction m_Dialog_Yes;
+    private readonly InputAction m_Dialog_No;
+    public struct DialogActions
+    {
+        private @Input m_Wrapper;
+        public DialogActions(@Input wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Yes => m_Wrapper.m_Dialog_Yes;
+        public InputAction @No => m_Wrapper.m_Dialog_No;
+        public InputActionMap Get() { return m_Wrapper.m_Dialog; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DialogActions set) { return set.Get(); }
+        public void SetCallbacks(IDialogActions instance)
+        {
+            if (m_Wrapper.m_DialogActionsCallbackInterface != null)
+            {
+                @Yes.started -= m_Wrapper.m_DialogActionsCallbackInterface.OnYes;
+                @Yes.performed -= m_Wrapper.m_DialogActionsCallbackInterface.OnYes;
+                @Yes.canceled -= m_Wrapper.m_DialogActionsCallbackInterface.OnYes;
+                @No.started -= m_Wrapper.m_DialogActionsCallbackInterface.OnNo;
+                @No.performed -= m_Wrapper.m_DialogActionsCallbackInterface.OnNo;
+                @No.canceled -= m_Wrapper.m_DialogActionsCallbackInterface.OnNo;
+            }
+            m_Wrapper.m_DialogActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Yes.started += instance.OnYes;
+                @Yes.performed += instance.OnYes;
+                @Yes.canceled += instance.OnYes;
+                @No.started += instance.OnNo;
+                @No.performed += instance.OnNo;
+                @No.canceled += instance.OnNo;
+            }
+        }
+    }
+    public DialogActions @Dialog => new DialogActions(this);
     public interface IPlayActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface IDialogActions
+    {
+        void OnYes(InputAction.CallbackContext context);
+        void OnNo(InputAction.CallbackContext context);
     }
 }

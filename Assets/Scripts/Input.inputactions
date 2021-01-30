@@ -156,6 +156,52 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Dialog",
+            "id": "f26502bf-1444-4713-9341-4c3c0e76bcd0",
+            "actions": [
+                {
+                    "name": "Yes",
+                    "type": "Button",
+                    "id": "46b88497-115e-48da-b69b-c362d01e66a0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "No",
+                    "type": "Button",
+                    "id": "4500eca9-7de3-485f-97bd-9b0d42533de7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e716db4f-7094-4a85-ac16-c83ab5034a21",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Yes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "acd1db1a-1ae7-435a-87b4-8e1e1f764596",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "No",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

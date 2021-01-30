@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour, HasItem
 
     void Awake()
     {
-        _input = new Input();
+        _input = InputController.Instance();
         _input.Play.Interact.performed += context => Interact();
         _selectorScript = selector.GetComponent<SelectorScript>();
     }
