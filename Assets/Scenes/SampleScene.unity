@@ -15972,19 +15972,25 @@ PrefabInstance:
     - target: {fileID: 4121520248097093531, guid: a13c3ef3496a38b4492b0ced08451ac5,
         type: 3}
       propertyPath: introDialog.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4121520248097093531, guid: a13c3ef3496a38b4492b0ced08451ac5,
         type: 3}
-      propertyPath: introDialog.Array.data[1]
+      propertyPath: introDialog.Array.data[0]
       value: You are Nemo, a friendly Ghost learning under your mentor Karen to take
         care of the "Lost and Found"
       objectReference: {fileID: 0}
     - target: {fileID: 4121520248097093531, guid: a13c3ef3496a38b4492b0ced08451ac5,
         type: 3}
-      propertyPath: introDialog.Array.data[2]
+      propertyPath: introDialog.Array.data[1]
       value: A place for the living to find what they lost and share what they have
         found.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121520248097093531, guid: a13c3ef3496a38b4492b0ced08451ac5,
+        type: 3}
+      propertyPath: introDialog.Array.data[2]
+      value: Hear there stories, find out what they are missing and accept what they
+        give you.
       objectReference: {fileID: 0}
     - target: {fileID: 4121520248097093531, guid: a13c3ef3496a38b4492b0ced08451ac5,
         type: 3}
