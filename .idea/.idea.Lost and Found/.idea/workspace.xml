@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e92df6d6-e39c-4b07-93b7-abe54cccfbdf" name="Default Changelist" comment="" />
+    <list default="true" id="e92df6d6-e39c-4b07-93b7-abe54cccfbdf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Dialog.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lost and Found/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lost and Found/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleSceneMicha.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleSceneMicha.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KarenScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KarenScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UiScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UiScript.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,11 +30,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Sidekick/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/a9/a3acd14a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/06214B24-5DBB-4D10-A9CE-FD10639BB04E/2c/7f185120/IPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9627032-6887-4EDC-9774-216522BE7D07/a2/f24f9292/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/51/7f412583/Material.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -33,17 +45,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HasItem.cs" />
       <option value="$PROJECT_DIR$/Assets/ScriptableObject/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UiScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SelectorScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MenuScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/KarenScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/NPC.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DialogManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SelectorScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/KarenScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NPC.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UiScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemContainerScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nlAnF9wGsTFWIRYTkk4AeRWzDM" />
@@ -97,6 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611954471092</updated>
       <workItem from="1611954477093" duration="7200000" />
+      <workItem from="1612896961062" duration="4000000" />
     </task>
     <servers />
   </component>

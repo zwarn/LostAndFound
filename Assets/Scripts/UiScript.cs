@@ -22,16 +22,17 @@ public class UiScript : MonoBehaviour
     public TMP_Text itemName;
     public GameObject itemNamePanel;
 
-    public void showItemName(ItemScript itemScript)
+    public void showItemName(string name, Vector3 position)
     {
-        if (itemScript == null)
+        if (name == null)
         {
             itemNamePanel.SetActive(false);
         }
         else
         {
             itemNamePanel.SetActive(true);
-            itemName.text = itemScript.itemName;
+            itemName.text = name;
+            itemNamePanel.transform.position = position;
         }
     }
 }
