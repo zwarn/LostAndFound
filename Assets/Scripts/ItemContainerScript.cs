@@ -36,13 +36,13 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
     {
         if (carriedItem != null)
         {
-            UiScript.Instance().showItemName(carriedItem.GetComponent<ItemScript>());
+            UiScript.Instance().showItemName(getName(), transform.position);
         }
     }
 
     private void hideItemName()
     {
-        UiScript.Instance().showItemName(null);
+        UiScript.Instance().showItemName(null, transform.position);
     }
 
     public void OnInteract(PlayerController playerController)
@@ -77,6 +77,11 @@ public class ItemContainerScript : MonoBehaviour, Interactable, HasItem
     public Vector3 Position()
     {
         return transform.position;
+    }
+
+    public string getName()
+    {
+        return carriedItem?.GetComponent<ItemScript>()?.itemName ?? null;
     }
 
     public bool hasItem()

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, Interactable
 {
+    public string npcName;
     public string[] dialog;
     public string[] dialogForIncorrectItem;
     public string[] dialogForCorrectItem;
@@ -23,12 +24,24 @@ public class NPC : MonoBehaviour, Interactable
     public void OnSelect()
     {
         GetComponent<SpriteRenderer>().material.SetFloat(Shader.PropertyToID("_OutlineEnabled"), 1);
+        showName();
     }
 
     public void OnDeselect()
     {
         GetComponent<SpriteRenderer>().material.SetFloat(Shader.PropertyToID("_OutlineEnabled"), 0);
+        hideName();
     }
+
+    private void showName()
+    {
+        UiScript.Instance().showItemName(getName(), transform.position);
+    }
+    private void hideName()
+    {
+        UiScript.Instance().showItemName(null, transform.position);
+    }
+    
 
     public void OnInteract(PlayerController playerController)
     {
@@ -50,6 +63,7 @@ public class NPC : MonoBehaviour, Interactable
             Debug.LogError("Player wanted to give the wrong item");
             return;
         }
+
         GameObject item = playerController.takeItem();
         playerController.putItem(holdsItem);
         //DialogManager.Instance().openDialog(dialogForCorrectItem, null);
@@ -78,5 +92,10 @@ public class NPC : MonoBehaviour, Interactable
     public Vector3 Position()
     {
         return transform.position;
+    }
+
+    public string getName()
+    {
+        return npcName ?? "unknown NPC";
     }
 }
