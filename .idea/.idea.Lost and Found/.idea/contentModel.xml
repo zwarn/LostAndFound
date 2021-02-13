@@ -8,11 +8,6 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraScript.cs" t="Include" />
-          <e p="Dialog" t="Include">
-            <e p="Dialog.cs" t="Include" />
-            <e p="DialogController.cs" t="Include" />
-            <e p="DialogPart.cs" t="Include" />
-          </e>
           <e p="DialogManager.cs" t="Include" />
           <e p="HasItem.cs" t="Include" />
           <e p="Input.cs" t="Include" />
