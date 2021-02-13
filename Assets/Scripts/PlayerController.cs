@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour, HasItem
     private Vector2 _viewDirection;
     private float _selectorDistance;
     private GameObject _carriedItem;
+    private Animator _animator;
 
     public string[] introDialog =
     {
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour, HasItem
         _input = InputController.Instance();
         _input.Play.Interact.performed += context => Interact();
         _selectorScript = selector.GetComponent<SelectorScript>();
+        _animator = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -69,7 +71,41 @@ public class PlayerController : MonoBehaviour, HasItem
             _viewDirection = moveDirection.y < 0 ? Vector2.down : Vector2.up;
         }
 
+        setAnimation();
+
         selector.transform.localPosition = _viewDirection * new Vector2(_selectorDistance, _selectorDistance);
+    }
+
+    private void setAnimation()
+    {
+        if (_viewDirection == Vector2.left)
+        {
+            _animator.SetBool("isLeft", true);
+            _animator.SetBool("isRight", false);
+            _animator.SetBool("isUp", false);
+            _animator.SetBool("isDown", false);
+        }
+        else if (_viewDirection == Vector2.right)
+        {
+            _animator.SetBool("isLeft", false);
+            _animator.SetBool("isRight", true);
+            _animator.SetBool("isUp", false);
+            _animator.SetBool("isDown", false);
+        }
+        else if (_viewDirection == Vector2.up)
+        {
+            _animator.SetBool("isLeft", false);
+            _animator.SetBool("isRight", false);
+            _animator.SetBool("isUp", true);
+            _animator.SetBool("isDown", false);
+        }
+        else if (_viewDirection == Vector2.down)
+        {
+            _animator.SetBool("isLeft", false);
+            _animator.SetBool("isRight", false);
+            _animator.SetBool("isUp", false);
+            _animator.SetBool("isDown", true);
+        }
     }
 
     void Interact()

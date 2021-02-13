@@ -8904,6 +8904,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 869765879}
   dialogBox: {fileID: 1150522972}
+--- !u!95 &796789737
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796789735}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c7e51e32c9166b4e9cc6cb9be76b3f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!199 &796789741
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -27916,6 +27935,16 @@ PrefabInstance:
     - target: {fileID: 4121520248097093541, guid: a13c3ef3496a38b4492b0ced08451ac5,
         type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121520248097093541, guid: a13c3ef3496a38b4492b0ced08451ac5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121520248097093541, guid: a13c3ef3496a38b4492b0ced08451ac5,
+        type: 3}
+      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4121520248097093541, guid: a13c3ef3496a38b4492b0ced08451ac5,
