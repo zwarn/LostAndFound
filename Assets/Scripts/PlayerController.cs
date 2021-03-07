@@ -8,10 +8,16 @@ public class PlayerController : MonoBehaviour, HasItem
     private Input _input;
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] private GameObject selector;
+    [SerializeField] private Sprite left;
+    [SerializeField] private Sprite right;
+    [SerializeField] private Sprite up;
+    [SerializeField] private Sprite down;
     private SelectorScript _selectorScript;
     private Vector2 _viewDirection;
     private float _selectorDistance;
     private GameObject _carriedItem;
+    private SpriteRenderer _spriteRenderer;
+    private ParticleSystem _particleSystem;
 
     public string[] introDialog =
     {
@@ -26,6 +32,8 @@ public class PlayerController : MonoBehaviour, HasItem
         _input = InputController.Instance();
         _input.Play.Interact.performed += context => Interact();
         _selectorScript = selector.GetComponent<SelectorScript>();
+        _particleSystem = GetComponent<ParticleSystem>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
@@ -69,7 +77,40 @@ public class PlayerController : MonoBehaviour, HasItem
             _viewDirection = moveDirection.y < 0 ? Vector2.down : Vector2.up;
         }
 
+        setAnimation(selectSprite());
+
         selector.transform.localPosition = _viewDirection * new Vector2(_selectorDistance, _selectorDistance);
+    }
+
+    private Sprite selectSprite()
+    {
+        if (_viewDirection == Vector2.left)
+        {
+            return left;
+        }
+
+        if (_viewDirection == Vector2.right)
+        {
+            return right;
+        }
+
+        if (_viewDirection == Vector2.up)
+        {
+            return up;
+        }
+
+        if (_viewDirection == Vector2.down)
+        {
+            return down;
+        }
+
+        return left;
+    }
+
+    private void setAnimation(Sprite sprite)
+    {
+        _spriteRenderer.sprite = sprite;
+        _particleSystem.textureSheetAnimation.SetSprite(0, sprite);
     }
 
     void Interact()

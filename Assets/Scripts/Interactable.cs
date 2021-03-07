@@ -11,4 +11,6 @@ public interface Interactable
     void OnInteract(PlayerController playerController);
 
     Vector3 Position();
+
+    string getName();
 }

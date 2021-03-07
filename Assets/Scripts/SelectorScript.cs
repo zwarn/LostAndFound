@@ -11,8 +11,8 @@ public class SelectorScript : MonoBehaviour
         var selectable = other.GetComponent<Interactable>();
         if (selectable != null)
         {
-            selectable.OnSelect();
             _selectables.Add(selectable);
+            resetSelection();
         }
     }
 
@@ -23,12 +23,28 @@ public class SelectorScript : MonoBehaviour
         {
             selectable.OnDeselect();
             _selectables.Remove(selectable);
+            resetSelection();
         }
     }
 
     public void Interact(PlayerController playerController)
     {
-        _selectables.OrderBy(interactable => (interactable.Position() - transform.position).magnitude).First()
-            .OnInteract(playerController);
+        closest()?.OnInteract(playerController);
+    }
+
+    private Interactable closest()
+    {
+        if (_selectables.Count == 0)
+        {
+            return null;
+        }
+
+        return _selectables.OrderBy(interactable => (interactable.Position() - transform.position).magnitude).First();
+    }
+
+    private void resetSelection()
+    {
+        _selectables.ForEach(interactable => interactable.OnDeselect());
+        closest()?.OnSelect();
     }
 }
